@@ -6,14 +6,12 @@
     tabindex="0"
     ref="game"
   >
-    <Ball />
-    <Board :x="x" :y="y" />
+    <Ship :x="x" :y="y" />
   </div>
 </template>
 
 <script>
-import Ball from './Ball.vue'
-import Board from './Board.vue'
+import Ship from './Ship.vue'
 export default {
   data() {
     return {
@@ -26,8 +24,7 @@ export default {
     }
   },
   components: {
-    Ball,
-    Board,
+    Ship,
   },
   methods: {
     keypress(key) {

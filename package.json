@@ -1,7 +1,7 @@
 {
-  "name": "ballline",
-  "version": "0.1.0",
-  "private": true,
+  "name": "taf-shooterproject",
+  "version": "0.0.0",
+  "private": false,
   "scripts": {
     "start": "vue-cli-service serve",
     "build": "vue-cli-service build",

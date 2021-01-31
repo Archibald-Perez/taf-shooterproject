@@ -21,8 +21,8 @@ export default {
       speed: -0.3,
       speedX: 0,
       speedY: 0,
-      x: -5000,
-      y: -5000,
+      x: 47.5,
+      y: 85,
     }
   },
   components: {
@@ -37,19 +37,21 @@ export default {
       this.speedX = 0
       this.speedY = 0
       if (this.keys[37]) {
-        this.speedX += -this.speed
-      }
-      if (this.keys[39]) {
         this.speedX += this.speed
       }
+      if (this.keys[39]) {
+        this.speedX += -this.speed
+      }
       if (this.keys[38]) {
-        this.speedY += -this.speed
+        this.speedY += this.speed
       }
       if (this.keys[40]) {
-        this.speedY += this.speed
+        this.speedY += -this.speed
       }
       this.x += this.speedX
       this.y += this.speedY
+      this.x = Math.min(Math.max(this.x, 5), 95)
+      this.y = Math.min(Math.max(this.y, 5), 95)
     },
   },
   mounted() {

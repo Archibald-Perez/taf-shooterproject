@@ -3,7 +3,7 @@ body {
 }
 
 #app {
-  font-family: Arial, sans-serif;
+  font-family: Avenir, Arial, sans-serif;
   text-align: center;
   color: #fff;
 }
@@ -19,18 +19,6 @@ body {
 
 .ball {
   position: fixed;
-  top: calc(50vh - 5vw / 2);
-  left: calc(50vw - 5vw / 2);
-  height: 5vw;
-  width: 5vw;
-}
-
-.line {
-  position: fixed;
-  top: calc(50vh - 14vw / 2);
-  left: calc(50vw - 14vw / 2);
-  height: 14vw;
-  width: 14vw;
 }
 
 .game {

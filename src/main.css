@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+}
+
+#app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #fff;
+}
+
+:focus {
+  outline: none;
+}
+
+::selection {
+  color: #fff;
+  background: #000;
+}
+
+.ball {
+  position: fixed;
+  top: calc(50vh - 5vw / 2);
+  left: calc(50vw - 5vw / 2);
+  height: 5vw;
+  width: 5vw;
+}
+
+.line {
+  position: fixed;
+  top: calc(50vh - 14vw / 2);
+  left: calc(50vw - 14vw / 2);
+  height: 14vw;
+  width: 14vw;
+}
+
+.game {
+  background-color: #000;
+  height: 100vh;
+  width: 100vw;
+}
+
+.background {
+  background-image: url('./assets/background.png');
+  position: fixed;
+  height: 10000vw;
+  width: 10000vw;
+}

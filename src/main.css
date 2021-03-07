@@ -18,11 +18,23 @@ body {
 }
 
 .ship {
+  background-color: #fff;
   position: fixed;
+  height: 2.5vw;
+  width: 2.5vw;
+  z-index: 15;
 }
 
 .game {
   background-color: #000;
   height: 100vh;
   width: 100vw;
+}
+
+.bullet {
+  background-color: #f00;
+  position: fixed;
+  height: 1vw;
+  width: 1vw;
+  z-index: 2;
 }

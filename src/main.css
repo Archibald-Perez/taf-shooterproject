@@ -1,4 +1,5 @@
 body {
+  image-rendering: pixelated;
   margin: 0;
 }
 
@@ -27,6 +28,9 @@ body {
 
 .game {
   background-color: #000;
+  background-image: url('assets/B001.png');
+  background-repeat: repeat;
+  background-size: cover;
   height: 100vh;
   width: 100vw;
 }

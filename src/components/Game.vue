@@ -5,6 +5,7 @@
     @keyup="keypress"
     tabindex="0"
     ref="game"
+    :style="backgroundPosition"
   >
     <Bullet
       v-for="bullet in bulletsVisible"
@@ -13,10 +14,10 @@
       @kill="destroyBullet(bullet)"
     />
     <Ship class="player-ship" :x="x" :y="y" />
-    <Ship :x="30" :y="50" :bullets="bulletsVisible" :move="true" />
+    <Ship :x="30" :y="50" :bullets="bulletsVisible" />
     <Ship :x="20" :y="50" :bullets="bulletsVisible" :move="true" />
     <Ship :x="40" :y="70" :bullets="bulletsVisible" :move="true" />
-    <Ship :x="60" :y="20" :bullets="bulletsVisible" :move="true" />
+    <Ship :x="60" :y="20" :bullets="bulletsVisible" />
   </div>
 </template>
 
@@ -35,6 +36,7 @@ export default {
       bullets: [],
       bulletDelay: 0,
       bulletIndex: 0,
+      time: 0,
     }
   },
   components: {
@@ -44,6 +46,11 @@ export default {
   computed: {
     bulletsVisible() {
       return this.bullets.filter((bullet) => bullet.show)
+    },
+    backgroundPosition: function() {
+      return {
+        'background-position': '0 -' + this.time / 10 + '%',
+      }
     },
   },
   methods: {
@@ -55,6 +62,7 @@ export default {
     },
     updateGame() {
       // Ship position
+      this.time++
       this.speedX = 0
       this.speedY = 0
       if (this.keys[37]) {

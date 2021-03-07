@@ -12,21 +12,17 @@ export default {
   },
   computed: {
     newPosX: function() {
-      return this.x + this.time / 10
+      if (this.move) {
+        return this.x + this.time / 10
+      } else {
+        return this.x
+      }
     },
     position: function() {
-      if (this.move) {
-        return {
-          left: this.newPosX + 'vw',
-          top: this.y + 'vh',
-          display: this.isDead ? 'none' : 'fail',
-        }
-      } else {
-        return {
-          left: this.x + 'vw',
-          top: this.y + 'vh',
-          display: this.isDead ? 'none' : 'fail',
-        }
+      return {
+        left: this.newPosX + 'vw',
+        top: this.y + 'vh',
+        display: this.isDead ? 'none' : 'fail',
       }
     },
   },
